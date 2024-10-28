@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITM 780 - Lab 2</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
 </head>
 <body>
 
@@ -12,7 +13,26 @@
         <h1>ITM 780 - Lab 2</h1>
         <h2>Rehaan Chadha</h2>
         <p>Student Number - 501196231</p>
+        
+        <!-- New Button for Name Prompt -->
+        <button id="name-prompt-btn">Enter Your Name</button>
+        <div id="display-name" class="name-display"></div>
     </header>
+
+    <!-- New Navigation Menu -->
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li>
+                More
+                <ul class="submenu">
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 
     <section>
         <h3>Educational Background</h3>
@@ -101,5 +121,14 @@
         </table>
     </section>
 
+    <!-- New Section with Clickable Profile Image -->
+    <section>
+        <h3>About Me</h3>
+        <div>
+            <img src="images/myimage.jpg" id="profile-pic" alt="My Profile Picture" class="clickable-img">
+        </div>
+    </section>
+
 </body>
 </html>
+
