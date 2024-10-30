@@ -86,34 +86,28 @@ button:hover {
 
 
 <script>
+    
     var form = document.getElementById("question-form");
     var clearButton = document.getElementById("clear-button");
 
     form.addEventListener("submit", function(event) {
-
-       
         var name = document.getElementById("name").value;
-
         var company = document.getElementById("company").value;
-
         var email = document.getElementById("email").value;
-
         var question = document.getElementById("question").value;
 
-        
         localStorage.setItem("name", name);
-
         localStorage.setItem("company", company);
-        
+        localStorage.setItem("email", email);
         localStorage.setItem("question", question);
-
-        alert("Your question has been submitted!");
     });
 
     clearButton.addEventListener("click", function() {
-        form.reset(); 
-        localStorage.clear(); 
+        form.reset();
+        localStorage.clear();
     });
+
+
 </script>
 
 

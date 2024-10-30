@@ -94,36 +94,3 @@
     
 </body>
 
-<script>
-   
-var form = document.getElementById("survey-form");
-var clearBtn = document.getElementById("clear-btn");
-var rangeInput = document.getElementById("range");
-var rangeValueDisplay = document.getElementById("range-value");
-
-
-rangeInput.addEventListener("input", function() {
-    rangeValueDisplay.textContent = rangeInput.value;
-});
-
-    var formData = {
-        country: form.country.value,
-        contactMethods: Array.from(form.elements['contact-methods'])
-            .filter(function(checkbox) {
-                return checkbox.checked;
-            })
-            .map(function(checkbox) {
-                return checkbox.value;
-            }),
-        portfolioStyle: form.elements['portfolio-style'].value,
-        usefulness: form.usefulness.value,
-        timeSpent: form.elements['time-spent'].value
-    };
-
-
-clearBtn.addEventListener("click", function() {
-    form.reset(); 
-});
-
-    </script>
-</html>
