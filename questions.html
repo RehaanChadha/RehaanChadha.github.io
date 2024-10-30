@@ -17,7 +17,7 @@
     <form action="/submit_question" method="post">
         <!-- Name Field -->
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required placeholder="Your Name" />
+        <input type="text" id="name" name="name" placeholder="Your Name" />
 
         <!-- Company Name Field -->
         <label for="company">Company Name:</label>
@@ -25,11 +25,11 @@
 
         <!-- Email Field -->
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required placeholder="Your Email Address" />
+        <input type="email" id="email" name="email"  placeholder="Your Email Address" />
 
         <!-- Question Field -->
         <label for="question">Your Question:</label>
-        <textarea id="question" name="question" required placeholder="Type your question here..." rows="4"></textarea>
+        <textarea id="question" name="question"  placeholder="Type your question here..." rows="6"></textarea>
 
         <!-- Submit Button -->
         <button type="submit">Submit</button>
@@ -80,10 +80,10 @@ button:hover {
 
  <script>document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent default form submission
-    const name = document.getElementById('name').value;
-    const companyName = document.getElementById('company').value;
-    const email = document.getElementById('email').value;
-    const question = document.getElementById('question').value;
+    var name = document.getElementById('name').value;
+    var companyName = document.getElementById('company').value;
+    var email = document.getElementById('email').value;
+    var question = document.getElementById('question').value;
 
     console.log(`Name: ${name}, Company: ${companyName}, Email: ${email}, Question: ${question}`);
 });

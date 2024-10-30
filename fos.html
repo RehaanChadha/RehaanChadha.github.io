@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Form</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    
 </head>
 <body>
     <header>
@@ -18,83 +18,112 @@
             <label for="country">1. Which country do you live in?</label><br>
             <input type="text" id="country" name="country" required>
         </div>
+        <br>
 
         <!-- Question 2 -->
         <fieldset>
             <legend>2. Which of these information would you look for when trying to contact the applicant through the website? (Select all that apply)</legend>
             <div>
-                <input type="checkbox" id="email" name="contact-methods">
-               
+                <input type="checkbox" id="email" name="contact-methods" value="Email">
                 <label for="email">Email</label>
             </div>
             <div>
-                <input type="checkbox" id="linkedin" name="contact-methods" >
-
+                <input type="checkbox" id="linkedin" name="contact-methods" value="LinkedIn">
                 <label for="linkedin">LinkedIn</label>
             </div>
             <div>
-                <input type="checkbox" id="social-media" name="contact-methods" >
+                <input type="checkbox" id="social-media" name="contact-methods" value="Social Media">
                 <label for="social-media">Social Media</label>
             </div>
             <div>
-                <input
-                 type="checkbox" id="phone" name="contact-methods" >
+                <input type="checkbox" id="phone" name="contact-methods" value="Phone Number">
                 <label for="phone">Phone Number</label>
             </div>
         </fieldset>
+        <br>
 
+        <!-- Question 3 -->
         <fieldset>
-            <legend>
-                3.Which style of professional portfolio website do you prefer?</legend>
-            <form >
-                <input type="radio" name="min" id="mtext">
-                <label for="min">Minimalist and Clean Design </label>
-                
-                <input type="radio" name="text" id="wtext">
-                <label for="text">Text-Focused with Detailed Information</label>
-
-                <input type="radio" name= "vis" id="htxt">
-                <label for="text">Highly Visual with Interactive Elements </label>
-            </form>
-        </fieldset>
-
-        <fieldset> 
+            <legend>3. Which style of professional portfolio website do you prefer?</legend>
             <div>
-                <legend>
-                    4. how usefull do you find a peronal portfolio website?
-
-                </legend>
-
-                <form >
-                    <label for="range">rate between 1 to 50</label>
-                    <input type="range" id="rage" name="range" min="0" max="50">
-                    <input type="submit" value="Submit">
-                  </form>
+                <input type="radio" name="portfolio-style" id="minimalist" value="Minimalist and Clean Design" required>
+                <label for="minimalist">Minimalist and Clean Design</label>
+            </div>
+            <div>
+                <input type="radio" name="portfolio-style" id="text-focused" value="Text-Focused with Detailed Information">
+                <label for="text-focused">Text-Focused with Detailed Information</label>
+            </div>
+            <div>
+                <input type="radio" name="portfolio-style" id="high-visual" value="Highly Visual with Interactive Elements">
+                <label for="high-visual">Highly Visual with Interactive Elements</label>
             </div>
         </fieldset>
+        <br>
 
+        <!-- Question 4 -->
+        <fieldset> 
+            <legend>4. How useful do you find a personal portfolio website?</legend>
+            <label for="range">Rate between 0 to 50:</label>
+            <input type="range" id="range" name="usefulness" min="0" max="50">
+            <span id="range-value">25</span> <!-- Display the range value -->
+        </fieldset>
+        <br>
 
+        <!-- Question 5 -->
         <fieldset>
             <legend>5. How much time do you spend on a candidate's personal portfolio?</legend>
-            <form>
-                <select name="t">
-                    <option value="2">Less than 2 mins</option>
-                    <option value="3">3-6 minutes</option>
-                    <option value="7">7-10 minutes</option>
-                    <option value="10plus">10+ minutes</option>
-                </select>
-            </form>
+            <select name="time-spent" id="time-spent" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Less than 2 mins">Less than 2 mins</option>
+                <option value="3-6 minutes">3-6 minutes</option>
+                <option value="7-10 minutes">7-10 minutes</option>
+                <option value="10+ minutes">10+ minutes</option>
+            </select>
         </fieldset>
+        <br>
 
-
-       
-
-       
+        <!-- Submit and Clear Buttons -->
         <button type="submit">Submit Survey</button>
+        <button type="button" id="clear-btn">Clear</button>
     </form>
 
     <footer>
         <p>Thank you for participating in our survey!</p>
     </footer>
+
+    
 </body>
+
+<script>
+   
+var form = document.getElementById("survey-form");
+var clearBtn = document.getElementById("clear-btn");
+var rangeInput = document.getElementById("range");
+var rangeValueDisplay = document.getElementById("range-value");
+
+
+rangeInput.addEventListener("input", function() {
+    rangeValueDisplay.textContent = rangeInput.value;
+});
+
+    var formData = {
+        country: form.country.value,
+        contactMethods: Array.from(form.elements['contact-methods'])
+            .filter(function(checkbox) {
+                return checkbox.checked;
+            })
+            .map(function(checkbox) {
+                return checkbox.value;
+            }),
+        portfolioStyle: form.elements['portfolio-style'].value,
+        usefulness: form.usefulness.value,
+        timeSpent: form.elements['time-spent'].value
+    };
+
+
+clearBtn.addEventListener("click", function() {
+    form.reset(); 
+});
+
+    </script>
 </html>
