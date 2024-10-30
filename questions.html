@@ -1,6 +1,79 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2757
-\cocoatextscaling0\cocoaplatform0{\fonttbl}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask a Question</title>
+    
+</head>
+<body>
+
+<header>
+    <h1>Ask Your Questions</h1>
+    <p>We’d love to hear from you! Please fill out the form below.</p>
+</header>
+
+<section>
+    <form action="/submit_question" method="post">
+        <!-- Name Field -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Your Name" />
+
+        <!-- Company Name Field -->
+        <label for="company">Company Name:</label>
+        <input type="text" id="company" name="company" placeholder="Your Company Name" />
+
+        <!-- Email Field -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Your Email Address" />
+
+        <!-- Question Field -->
+        <label for="question">Your Question:</label>
+        <textarea id="question" name="question" required placeholder="Type your question here..." rows="4"></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+</body>
+</html>
+ <style>
+    section {
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+ </style>
