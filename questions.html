@@ -88,9 +88,11 @@ button:hover {
 <script>
     
     var form = document.getElementById("question-form");
-    var clearButton = document.getElementById("clear-button");
+    var clearButton = document.getElementById("clear");
 
     form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
         var name = document.getElementById("name").value;
         var company = document.getElementById("company").value;
         var email = document.getElementById("email").value;
@@ -100,6 +102,8 @@ button:hover {
         localStorage.setItem("company", company);
         localStorage.setItem("email", email);
         localStorage.setItem("question", question);
+
+        alert("Your question has been submitted!");
     });
 
     clearButton.addEventListener("click", function() {
