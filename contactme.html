@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+   
+</head>
+<body>
+
+<header>
+    <h1>Contact Me</h1>
+    <p>Have any questions, feedback, or just want to say hello? Drop a message below!</p>
+</header>
+
+<section>
+    <form action="/submit_contact" method="post">
+        <!-- Name Field -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Your Full Name" />
+
+        <!-- Email Field -->
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required placeholder="Your Email" />
+
+        <!-- Phone Number Field -->
+        <label for="phone">Phone Number (Optional):</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" />
+
+        <!-- Purpose Dropdown -->
+        <label for="purpose">Purpose of Contact:</label>
+        <select id="purpose" name="purpose" required>
+            <option value="" disabled selected>Select a purpose...</option>
+            <option value="feedback">Feedback</option>
+            <option value="question">Have a Question</option>
+            <option value="collaboration">Collaboration</option>
+            <option value="other">Other</option>
+        </select>
+
+        <!-- Message Box -->
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" required placeholder="Write your message here..." rows="6"></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+</body>
+</html>
+
+<style>
+    section {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #f3f4f6;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin: 15px 0 5px;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+button {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+</style>
