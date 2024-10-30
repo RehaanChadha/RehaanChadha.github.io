@@ -15,19 +15,19 @@
 
 <section>
     <form action="/submit_contact" method="post">
-        <!-- Name Field -->
+      
         <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required placeholder="Your Full Name" />
+        <input type="text" id="name" name="name"  placeholder="Your Full Name" />
 
-        <!-- Email Field -->
+      
         <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required placeholder="Your Email" />
+        <input type="email" id="email" name="email"  placeholder="Your Email" />
 
-        <!-- Phone Number Field -->
-        <label for="phone">Phone Number (Optional):</label>
+
+        <label for="phone">Phone Number :</label>
         <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" />
 
-        <!-- Purpose Dropdown -->
+
         <label for="purpose">Purpose of Contact:</label>
         <select id="purpose" name="purpose" required>
             <option value="" disabled selected>Select a purpose...</option>
@@ -37,11 +37,11 @@
             <option value="other">Other</option>
         </select>
 
-        <!-- Message Box -->
+        
         <label for="message">Your Message:</label>
         <textarea id="message" name="message" required placeholder="Write your message here..." rows="6"></textarea>
 
-        <!-- Submit Button -->
+        
         <button type="submit">Send Message</button>
     </form>
 </section>
