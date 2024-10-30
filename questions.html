@@ -77,3 +77,14 @@ button:hover {
 }
 
  </style>
+
+ <script>document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+    const name = document.getElementById('name').value;
+    const companyName = document.getElementById('company').value;
+    const email = document.getElementById('email').value;
+    const question = document.getElementById('question').value;
+
+    console.log(`Name: ${name}, Company: ${companyName}, Email: ${email}, Question: ${question}`);
+});
+</script>
