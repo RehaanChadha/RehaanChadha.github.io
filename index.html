@@ -16,6 +16,12 @@
             margin: 10px;
             padding: 10px;
             font-size: 1em;
+
+        }
+
+        #picture{
+            width: 150px; 
+              height: auto;
         }
     </style>
     <script>
@@ -34,8 +40,8 @@
         }
 
        
-        function displayAltText() {
-            alert('Placeholder Image: A placeholder image representing a profile or scenery.');
+        function displayAltText(alttext) {
+            alert(alttext);
         }
     </script>
 </head>
@@ -57,10 +63,10 @@
     
     <section>
         <h3>random pictures</h3>
-        <div>
-            <img src="pic1.JPG" id="picture" alt="glass filled with water, placed on a counter" class="clickable-img" onclick="displayAltText()">
-            <img src="pic2.JPG" id="picture" alt="a compass inside a sphere.golden in color and standing on a table" class="clickable-img" onclick="displayAltText()">
-            <img src="pic3.JPG" id="picture" alt="street filled with lights and surrounded by buildings" class="clickable-img" onclick="displayAltText()">
+        <div id="image">
+            <img src="pic1.JPG" id="picture" alt="glass filled with water, placed on a counter" class="clickable-img" onclick="displayAltText('glass filled with water, placed on a counter')">
+            <img src="pic2.JPG" id="picture" alt="a compass inside a sphere.golden in color and standing on a table" class="clickable-img" onclick="displayAltText('a compass inside a sphere.golden in color and standing on a table')">
+            <img src="pic3.JPG" id="picture" alt="street filled with lights and surrounded by buildings" class="clickable-img" onclick="displayAltText('street filled with lights and surrounded by buildings')">
         </div>
     </section>
 
