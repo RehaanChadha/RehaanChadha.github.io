@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Lab</title>
+    <style>
+        /* Colorblind mode styles with standard colorblind-friendly colors */
+        .colorblind-mode {
+            background-color: #E5E5E5; /* Light gray background for better contrast */
+            color: #1A1A1A; /* Dark text for clarity */
+        }
+
+        /* General button styling */
+        button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 1em;
+        }
+    </style>
+    <script>
+        // Text resizing functions
+        function increaseTextSize() {
+            document.body.style.fontSize = 'larger';
+        }
+
+        function decreaseTextSize() {
+            document.body.style.fontSize = 'smaller';
+        }
+
+        // Colorblind mode toggle
+        function toggleColorblindMode() {
+            document.body.classList.toggle('colorblind-mode');
+        }
+
+        // Alt-text display function for the image
+        function displayAltText() {
+            alert('Placeholder Image: A placeholder image representing a profile or scenery.');
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Accessibility Lab</h1>
+        <h2>Rehaan Chadha</h2>
+        <p>Student Number - 501196231</p>
+    </header>
+
+    <!-- Accessibility Buttons -->
+    <div>
+        <button onclick="increaseTextSize()">Increase Text Size</button>
+        <button onclick="decreaseTextSize()">Decrease Text Size</button>
+        <button onclick="toggleColorblindMode()">Toggle Colorblind Mode</button>
+    </div>
+
+    <!-- Placeholder Image with Alt Text Display -->
+    <section>
+        <h3>About Me</h3>
+        <div>
+            <img src="https://via.placeholder.com/150" id="profile-pic" alt="Placeholder Image" class="clickable-img" onclick="displayAltText()">
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Rehaan Chadha. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
