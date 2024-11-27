@@ -3,88 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessibility Lab</title>
-    <style>
-        
-        .colorblind-mode {
-            background-color: #E5E5E5; 
-            color: #1A1A1A; 
-        }
-
-      
-        button {
-            margin: 10px;
-            padding: 10px;
-            font-size: 1em;
-
-        }
-
-        #picture{
-            width: 150px; 
-              height: auto;
-        }
-    </style>
-    <script>
-       
-        function increaseTextSize() {
-            document.body.style.fontSize = 'larger';
-        }
-
-        function decreaseTextSize() {
-            document.body.style.fontSize = 'smaller';
-        }
-
-        
-        function toggleColorblindMode() {
-            document.body.classList.toggle('colorblind-mode');
-        }
-
-       
-        function displayAltText(alttext) {
-            alert(alttext);
-        }
-    </script>
+    <title>SEO and SMO Techniques</title>
+    <meta name="description" content="Learn about SEO and SMO techniques to improve online visibility and engagement.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <h1>SEO and SMO Techniques</h1>
 
-    <header>
-        <h1>Accessibility Lab</h1>
-        <h2>Rehaan Chadha</h2>
-        <p>Student Number - 501196231</p>
-    </header>
+    <!-- SEO Paragraphs -->
+    <p>One effective SEO technique is the use of meta descriptions. These brief summaries appear under the page title in search engine results, providing a clear and concise description of the page’s content. By including relevant keywords, meta descriptions can increase click-through rates and drive more traffic to your website (Moz, n.d.).</p>
 
-    
-    <div>
-        <button onclick="increaseTextSize()">Increase Text Size</button>
-        <button onclick="decreaseTextSize()">Decrease Text Size</button>
-        <button onclick="toggleColorblindMode()">Toggle Colorblind Mode</button>
-    </div>
+    <p>Another crucial SEO strategy is optimizing images with alt text. Alt text not only makes websites more accessible to visually impaired users but also helps search engines understand the content of images. This practice can enhance rankings in image search results (Search Engine Journal, 2023).</p>
 
-    
-    <section>
-        <h3>random pictures</h3>
-        <div id="image">
-            <img src="pic1.JPG" id="picture" alt="glass filled with water, placed on a counter" class="clickable-img" onclick="displayAltText('glass filled with water, placed on a counter')">
-            <p> date:13th november 2024 <br> location:toronto </p>
-            <img src="pic2.JPG" id="picture" alt="a compass inside a sphere.golden in color and standing on a table" class="clickable-img" onclick="displayAltText('a compass inside a sphere.golden in color and standing on a table')">
-             <p> date:13th november 2024 <br> location:toronto </p>
-           
-            <img src="pic3.JPG" id="picture" alt="street filled with lights and surrounded by buildings" class="clickable-img" onclick="displayAltText('street filled with lights and surrounded by buildings')">
-            <p> date:13th november 2024 <br> location:toronto </p>
+    <p>Keyword optimization is a foundational SEO practice. By researching and integrating high-traffic keywords into website content, businesses can align their pages with what users are searching for, thus improving visibility in search engine results (Ahrefs, 2023).</p>
 
-        </div>
-    </section>
+    <!-- SMO Paragraphs -->
+    <p>The Facebook Like button is a popular SMO technique that allows users to easily share content with their networks. This can lead to increased visibility and engagement, as liked content often appears in users' feeds, reaching a broader audience (Hootsuite, 2023).</p>
 
-    <section>
-        <h3>audio</h3>
-        <audio controls> <source src="Shoppers Drug Mart.mp3" type="audio/mp3"></audio>
-        <p>source: recorded by Rehaan Chadha</p>
-            
-    </section>
+    <p>Adding an Instagram share option is another effective SMO strategy. By enabling users to share images or posts directly to Instagram, businesses can tap into the platform's highly engaged audience, boosting brand awareness and interaction (Sprout Social, 2023).</p>
 
-    <footer>
-        <p>© 2024 Rehaan Chadha. All rights reserved.</p>
-    </footer>
+    <p>Twitter hashtags are a powerful SMO tool for categorizing content and increasing discoverability. By using trending or relevant hashtags, brands can reach users interested in specific topics, encouraging interaction and participation in ongoing conversations (Buffer, 2023).</p>
 
+    <!-- Instagram Link -->
+    <h2>Follow TMU</h2>
+    <a href="https://www.instagram.com/torontomet/" target="_blank">
+        <i class="fab fa-instagram"></i> Follow TMU on Instagram
+    </a>
+
+    <!-- References -->
+    <h3>References</h3>
+    <ul>
+        <li>Moz. (n.d.). Meta descriptions. Retrieved from https://moz.com/learn/seo/meta-description</li>
+        <li>Search Engine Journal. (2023). Image optimization: Best practices. Retrieved from https://www.searchenginejournal.com/image-optimization-best-practices</li>
+        <li>Ahrefs. (2023). Keyword research for SEO. Retrieved from https://ahrefs.com/keyword-research</li>
+        <li>Hootsuite. (2023). The benefits of using Facebook Like buttons. Retrieved from https://hootsuite.com/social-media-strategy</li>
+        <li>Sprout Social. (2023). Instagram sharing best practices. Retrieved from https://sproutsocial.com/instagram-sharing</li>
+        <li>Buffer. (2023). How to use Twitter hashtags effectively. Retrieved from https://buffer.com/twitter-hashtags</li>
+    </ul>
 </body>
 </html>
